@@ -1,0 +1,30 @@
+# macOS system files
+.DS_Store
+
+# Node.js modules for any Node-based subprojects
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Ignore build outputs
+dist/
+build/
+*.out
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore OS generated files
+Thumbs.db
+.DS_Store
+
+# Ignore environment files at the parent level
+.env
+
+# Ignore sensitive configuration files
+config.json

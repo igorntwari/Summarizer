@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Summarizer",
+  "version": "1.0",
+  "description": "Summarize selected text using OpenAI",
+  "permissions": ["activeTab", "storage", "tabs"], 
+  "host_permissions": ["http://localhost:8080/*", "http://127.0.0.1:8080/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src http://localhost:8080 http://127.0.0.1:8080"
+  }
+}
